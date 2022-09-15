@@ -1,0 +1,81 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.Form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.Form input[type="text"] {
+  padding: 8px;
+  margin-bottom: 5px;
+  width: 270px;
+  border: none;
+  border-radius: 5px;
+}
+
+.Form input[type="submit"] {
+  margin-top: 3px;
+  padding: 5px;
+  background-color: #0d6efd;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.Form input[type="submit"]:hover {
+  background-color: #4991fd;
+}
+.Card p {
+    text-align: justify;
+}
+
+.Container-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding-bottom: 3px;
+  padding-left: 3px;
+  padding-right: 3px;
+  background-color: #7e838b;
+}
+
+.Card-options {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.Card-options button {
+    cursor: pointer;
+  border: none;
+  font-size: 12px;
+  padding: 3px;
+  border-radius: 3px;
+}
+.Card-options .Card__delete {
+    background-color: #e63946;
+}
+.Card-options .Card__edit {
+    background-color: #457b9d;
+}
+.Card-options .Card__edit {
+  margin-left: 4px;
+}
+.Card-options span {
+    font-size: 12px;
+  margin-left: 4px;
+}
+
+.Card-options input {
+  margin-left: 4px;
+  vertical-align: middle;
+  position: relative;
+}
