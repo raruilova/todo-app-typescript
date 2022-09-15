@@ -25,6 +25,21 @@ export const todoReducer = (state: TodoState, action: TodoAction): TodoState => 
                 ...state,
                 todos: state.todos.map(todo => todo.id === action.payload.id ? action.payload : todo)
             }
+        case "TOGGLE_TODO":
+            return {
+                ...state,
+                todos: state.todos.map(({...todo}) => {
+                    if(todo.id === action.payload.id) {
+                        todo.isCompleted = !todo.isCompleted; 
+                    }
+                    return todo;
+                } )
+            }
+        case "PENDING_TODOS":
+            return {
+                ...state,
+                pending: state.todos.filter(todo => !todo.isCompleted).length
+            }
     
         default:
             return state;

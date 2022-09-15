@@ -10,7 +10,7 @@ interface Props {
 const initialState: TodoState = {
   todoCount: 0,
   todos: [],
-  completed: 0,
+  completedList: false,
   pending: 0,
   updateTodo: {
     id: "",
@@ -34,6 +34,12 @@ export const TodoProvider = ({ children }: Props) => {
   const updateTodoSuccess = (todo:Todo) => {
     dispatch({ type: "UPDATE_TODO_SUCCESS", payload: todo });
   }
+  const toggleTodo = (todo: Todo) => {
+    dispatch({type: "TOGGLE_TODO", payload: todo});
+  }
+  const pendingTodos = () => {
+    dispatch({type: "PENDING_TODOS"});
+  }
   return (
     <TodoContext.Provider
       value={{
@@ -41,7 +47,9 @@ export const TodoProvider = ({ children }: Props) => {
         addTodo,
         deleteTodo,
         updateTodos,
-        updateTodoSuccess
+        updateTodoSuccess,
+        toggleTodo,
+        pendingTodos
       }}
     >
       {children}

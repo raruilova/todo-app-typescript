@@ -39,8 +39,6 @@ export const TodoForm = () => {
         desc: "",
         isCompleted: false,
       };
-
-      console.log("editado");
     } else {
       addTodo(form);
     }
