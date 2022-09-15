@@ -8,5 +8,6 @@ export interface TodoState {
     todoCount: number,
     todos: Todo[],
     completed: number,
-    pending: number
+    pending: number,
+    updateTodo: Todo
 }
