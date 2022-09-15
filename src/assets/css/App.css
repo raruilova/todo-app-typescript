@@ -35,6 +35,19 @@ main p {
 .Form input[type="submit"]:hover {
   background-color: #4991fd;
 }
+.btn-completed-list {
+  display: flex;
+  position: absolute;
+  margin-left: 180px;
+  top: 55%;
+}
+.btn-completed-list button {
+  background-color: #457b9d;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+}
 .Card p {
     text-align: justify;
 }

@@ -6,4 +6,5 @@ export type TodoAction =
   | { type: "DELETE_TODO"; payload: Todo }
   | { type: "UPDATE_TODO"; payload: Todo }
   | { type: "UPDATE_TODO_SUCCESS"; payload: Todo }
-  | { type: "PENDING_TODOS" };
+  | { type: "PENDING_TODOS" }
+  | { type: "COMPLETED_TODOS" };

@@ -8,7 +8,8 @@ interface TodoContextProps  {
     updateTodos: (todo:Todo) => void,
     updateTodoSuccess: (Todo:Todo) => void,
     toggleTodo: (todo: Todo) => void,
-    pendingTodos: () => void
+    pendingTodos: () => void,
+    completedButton: () => void
 }
 
 export const TodoContext = createContext({} as TodoContextProps);

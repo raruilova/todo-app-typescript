@@ -9,7 +9,7 @@ export const TodoForm = () => {
     isCompleted: false,
   });
 
-  const { addTodo, todoState, updateTodoSuccess } = useTodo();
+  const { addTodo, todoState, updateTodoSuccess, completedButton } = useTodo();
 
   useEffect(() => {
     if (todoState.updateTodo.id !== "") {
@@ -65,6 +65,9 @@ export const TodoForm = () => {
           value={todoState.updateTodo.id ? "Editar" : "Registrar"}
         />
       </form>
+      <div className="btn-completed-list">
+        <button onClick={() => completedButton()}>Completados</button>
+      </div>
     </div>
   );
 };

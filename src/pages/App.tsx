@@ -1,6 +1,6 @@
 import "../assets/css/App.css";
 import { PendingTodo } from "../components/PendingTodo";
-import { TodoForm } from "../components/TodoForm";
+import { Todo } from "../components/Todo";
 import { TodoList } from "../components/TodoList";
 import { TodoProvider } from "../context/TodoProvider";
 
@@ -11,7 +11,7 @@ function App() {
         <h1>TODO's</h1>
         <PendingTodo />
         <section>
-          <TodoForm />
+          <Todo />
         </section>
         <br />
         <section>

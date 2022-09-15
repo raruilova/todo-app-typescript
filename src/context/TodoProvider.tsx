@@ -40,6 +40,9 @@ export const TodoProvider = ({ children }: Props) => {
   const pendingTodos = () => {
     dispatch({type: "PENDING_TODOS"});
   }
+  const completedButton = () => {
+    dispatch({type: "COMPLETED_TODOS"})
+  }
   return (
     <TodoContext.Provider
       value={{
@@ -49,7 +52,8 @@ export const TodoProvider = ({ children }: Props) => {
         updateTodos,
         updateTodoSuccess,
         toggleTodo,
-        pendingTodos
+        pendingTodos,
+        completedButton
       }}
     >
       {children}

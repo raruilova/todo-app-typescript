@@ -40,6 +40,11 @@ export const todoReducer = (state: TodoState, action: TodoAction): TodoState => 
                 ...state,
                 pending: state.todos.filter(todo => !todo.isCompleted).length
             }
+        case "COMPLETED_TODOS":
+            return {
+                ...state,
+                completedList: !state.completedList
+            }
     
         default:
             return state;
