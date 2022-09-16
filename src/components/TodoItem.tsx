@@ -7,7 +7,7 @@ interface Props {
 
 export const TodoItem = ({ todo }: Props) => {
   const { deleteTodo, updateTodos, toggleTodo } = useTodo();
-  
+
   return (
     <div className="Container-card">
       <div className="Card">
@@ -21,7 +21,13 @@ export const TodoItem = ({ todo }: Props) => {
           Editar
         </button>
         <span>{!todo.isCompleted ? "Incompleto" : "Completo"}</span>
-        <input type="checkbox" name="" id="" onClick={() => toggleTodo(todo)} />
+        <input
+          type="checkbox"
+          name=""
+          id=""
+          defaultChecked={todo.isCompleted}
+          onClick={() => toggleTodo(todo)}
+        />
       </div>
     </div>
   );

@@ -17,7 +17,6 @@ export const TodoForm = () => {
     }
     
   }, [todoState.updateTodo]);
-  console.log(form);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setForm({
@@ -28,7 +27,7 @@ export const TodoForm = () => {
   
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (form.desc === "") {
+    if (form.desc.trim() === "") {
       alert("No envies una tarea vacía");
       return;
     }
@@ -50,8 +49,8 @@ export const TodoForm = () => {
     });
   };
   return (
-    <div>
-      <form className="Form" onSubmit={handleSubmit}>
+    <div className="Form">
+      <form  onSubmit={handleSubmit}>
         <label htmlFor="desc">Tarea</label>
         <input
           type="text"
@@ -60,14 +59,14 @@ export const TodoForm = () => {
           value={form.desc}
           onChange={handleChange}
         />
+        <div className="btn">
         <input
           type="submit"
           value={todoState.updateTodo.id ? "Editar" : "Registrar"}
         />
+        <a className="btn-completed-list" onClick={() => completedButton()} href="#">Completados</a>
+        </div>
       </form>
-      <div className="btn-completed-list">
-        <button onClick={() => completedButton()}>Completados</button>
-      </div>
     </div>
   );
 };

@@ -9,7 +9,7 @@ main p {
   font-size: 10px;
 }
 
-.Form {
+.Form  form{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -35,18 +35,23 @@ main p {
 .Form input[type="submit"]:hover {
   background-color: #4991fd;
 }
-.btn-completed-list {
+.Form .btn {
   display: flex;
-  position: absolute;
-  margin-left: 180px;
-  top: 55%;
+  align-items: center;
+  gap: 123px;
 }
-.btn-completed-list button {
-  background-color: #457b9d;
+.btn a {
+  text-decoration: none;
+  padding: 2px 3px 0px;
+  background-color: #52796f;
+  border-radius: 6px;
+  font-size: 13px;
   cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  padding: 5px;
+  margin-top: 2px;
+  color: white;
+}
+.btn a:hover {
+  background-color: #84a98c;
 }
 .Card p {
     text-align: justify;
@@ -95,4 +100,17 @@ main p {
   margin-left: 4px;
   vertical-align: middle;
   position: relative;
+}
+
+.btn-todo {
+  margin-bottom: 3px;
+  margin-top: 6px;
+  border: none;
+  background-color: #52796f;
+  border-radius: 5px;
+  padding: 3px;
+  cursor: pointer;
+}
+.btn-todo:hover {
+  background-color: #84a98c;
 }
